@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Visualiser</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="heading">
+                <h2>Sorting Visualiser</h2>
+            </div>
+            
+            <div class="array-btns">
+                <div class="class1">
+                <p>Change array size: </p>
+                <input type="range" id="a_size" min=20 max=150 step=1 value=80>
+                </div> 
+                <div class="class2">
+                <p>Algorithm Speed:</p>
+                <input id="a_speed" type="range" min=1 max=5 step=1 value=4>
+            </div>
+            </div>
+            <div class="seperator"></div>
+            <div class="sorting-btn">
+                <button>Bubble Sort</button>
+                <button>Selection Sort</button>
+                <button>Insertion Sort</button>
+                <button>Merge Sort</button>
+                <button>Quick Sort</button>
+                <button>Heap Sort</button>
+            </div>
+            <div class="seperator"></div>
+            <div class="new-array-btn">
+                <button id="a_generate">Generate New Array!</button>
+            </div>
+        </nav>
+    </header>
+    <section>
+          <div class="time_complexities">
+            <h3>TIME COMPLEXITY</h3>
+            <div class="Complexity_Containers" id="Time_Complexity_Types_Container">
+
+                <div class="Pair_Definitions fir">
+                    <p class="Sub_Heading" id="Time_Worst">Worst case:</p>
+                    <p id="Time_Worst_case"></p>
+                </div>
+                
+                <div class="Pair_Definitions sec">
+                    <p class="Sub_Heading" id="Time_Average">Average case:</p>
+                    <p id="Time_Average_case"></p>
+                </div>
+                
+                <div class="Pair_Definitions third">
+                    <p class="Sub_Heading" id="Time_Best">Best case:</p>
+                    <p id="Time_Best_case"></p>
+                </div>
+
+            </div>
+
+          </div>
+          <div id="array_container"><!--for array containers--></div>
+          <div class="space_complexity">
+            <h3>SPACE COMPLEXITY</h3>
+
+            <div class="Complexity_Containers" id="Space_Complexity_Types_Container">
+
+                <div class="Pair_Definitions fir">
+                    <p class="Sub_Heading" id="Space_Worst">Worst case:</p>
+                    <p id="Space_Worst_case"></p>
+                </div>
+                <div class="Pair_Definitions sec">
+                    <p class="Sub_Heading" id="Space_Average">Average case:</p>
+                    <p id="Space_Average_case"></p>
+                </div>
+                <div class="Pair_Definitions third">
+                    <p class="Sub_Heading" id="Space_Best">Best case:</p>
+                    <p id="Space_Best_case"></p>
+                </div>
+            </div>
+          </div>
+    </section>
+    
+    <div class="footer">
+        <div class="compare">
+            <div class="box box1"></div>
+            <p>Compare</p>
+        </div> 
+        <div class="compare">
+            <div class="box box2"></div>
+            <p>Swap</p>
+        </div> 
+        <div class="compare">
+            <div class="box box3"></div>
+            <p>Sorted</p>
+        </div> 
+    </div>
+    
+    <script src="./scripts/main.js"></script>   <!--This should be at the end of body and should be loaded before sorts.js-->
+    <script src="./scripts/visualizations.js"></script>  <!--This should be loaded after main.js-->
+    
+    <script src="./scripts/bubble_sort.js"></script>
+    <script src="./scripts/selection_sort.js"></script>
+    <script src="./scripts/insertion_sort.js"></script>
+    <script src="./scripts/merge_sort.js"></script>
+    <script src="./scripts/quick_sort.js"></script>
+    <script src="./scripts/heap_sort.js"></script>
+</body>
+</html>
+
